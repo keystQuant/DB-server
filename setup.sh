@@ -23,15 +23,15 @@ docker volume create postgres_log
 docker volume create postgres_lib
 
 cd ./config/postgres
-docker build -t api:postgres .
+docker build -t keystone:postgres .
 docker run -d \
-  --name api-db \
+  --name keystone-db \
   -v postgres_volume:/etc/postgresql \
   -v postgres_log:/var/log/postgresql \
   -v postgres_lib:/var/lib/postgresql \
   --restart=unless-stopped \
   -p 5432:5432 \
-  api:postgres
+  keystone:postgres
 
 # PostgreSQL 연결 확인하기: psql -h localhost -p 5432 -d <db-name> -U <username> --password
 
