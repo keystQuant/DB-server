@@ -3,7 +3,7 @@
 # reference 1 (docker volume): https://docs.docker.com/engine/reference/commandline/volume_create/#driver-specific-options
 # reference 2 (docker postgresql): https://docs.docker.com/engine/examples/postgresql_service/#using-the-container-volumes
 
-#### API 서버 자동 배포 스크립트 ####
+#### DB 서버 자동 배포 스크립트 ####
 
 # install Docker on server
 sudo apt-get update
