@@ -8,12 +8,12 @@ sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 
 # DB SETTING
-su -c "psql -c \"CREATE DATABASE arbiter;\"" postgres
-su -c "psql -c \"CREATE USER arbiter WITH PASSWORD 'makeitpopweAR!1';\"" postgres
-su -c "psql -c \"ALTER ROLE arbiter SET client_encoding TO 'utf8';\"" postgres
-su -c "psql -c \"ALTER ROLE arbiter SET default_transaction_isolation TO 'read committed';\"" postgres
-su -c "psql -c \"ALTER ROLE arbiter SET timezone TO 'UTC';\"" postgres
-su -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE arbiter TO arbiter;\"" postgres
+su -c "psql -c \"CREATE DATABASE keystone;\"" postgres
+su -c "psql -c \"CREATE USER keystone WITH PASSWORD 'keystoneinvestmentpostgresql2018';\"" postgres
+su -c "psql -c \"ALTER ROLE keystone SET client_encoding TO 'utf8';\"" postgres
+su -c "psql -c \"ALTER ROLE keystone SET default_transaction_isolation TO 'read committed';\"" postgres
+su -c "psql -c \"ALTER ROLE keystone SET timezone TO 'UTC';\"" postgres
+su -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE keystone TO keystone;\"" postgres
 su -c "psql -c \"\du\"" postgres
 
 ### PostgreSQL localhost setting
