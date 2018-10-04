@@ -1,3 +1,8 @@
+# User Setting
+echo -e "keystoneinvestmentpostgresql2018!\nkeystoneinvestmentpostgresql2018" | adduser keystone
+usermod -aG sudo keystone
+groups keystone
+
 # Firewall Setting
 sudo ufw app list
 sudo ufw allow OpenSSH
