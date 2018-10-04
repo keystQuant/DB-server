@@ -24,7 +24,7 @@ su -c "psql -c \"\du\"" postgres
 
 ### PostgreSQL localhost setting
 cd /etc/postgresql/9.5/main
-vim +":%s/#listen_addresses = 'localhost'/#listen_addresses = '*'/g | wq" postgresql.conf
+vim +":%s/#listen_addresses = 'localhost'/listen_addresses = '*'/g | wq" postgresql.conf
 
 cd /etc/postgresql/9.5/main
 vim +"%s/127.0.0.1\/32/0.0.0.0\/0   /g | %s/::1\/128/::\/0/g | wq" pg_hba.conf
