@@ -6,6 +6,7 @@ groups keystone
 # Firewall Setting
 sudo ufw app list
 sudo ufw allow OpenSSH
+sudo ufw allow 5432
 sudo ufw enable
 
 # Download PostgreSQL & setting
